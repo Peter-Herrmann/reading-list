@@ -1,5 +1,7 @@
 # reading-list
-A semi-organized research paper reading list for a computer architecture research group
+Some short but useful microarchitecture research papers
+
+## Microarchitecture
 
 [The Microarchitecture of Superscalar Processors](https://github.com/Peter-Herrmann/reading-list/files/11748113/ss_cgi.pdf) - 16
 
@@ -11,8 +13,16 @@ This paper looks at optimizing the tradeoff between instructions per cycle (IPC)
 
 [Trace Cache: a Low Latency Approach to High Bandwidth Instruction Fetching](https://github.com/Peter-Herrmann/reading-list/files/11748107/micro.trace-cache.pdf) - 12
 
+This paper introduces a type of instruction memory cache that caches dynamic traces of instrucitons from non-contiguous memory locations (following branch targets) and presenting them to the decoder as if they were contiguous. With contiguous traces presented to the decoder in a fetch block, then if the branch prediciton was correct, there is no fetch break as seen by the decoder, even if a fetch block contains flow control instructions. The trace cache is implemented in parallel to a normal instruction cache. The trace cache, in a way, implements the [superblock compilation strategy](https://github.com/Peter-Herrmann/reading-list/files/11750061/hwu_jsuper93.pdf) in hardware, mapping commonly run sequences of code into a contiguous block.
+
 [On Pipelining Dynamic Instruction Scheduling Logic](https://github.com/Peter-Herrmann/reading-list/files/11748110/stark.pdf) - 10
+
+## Security
 
 [Meltdown: Reading Kernel Memory from User Space](https://github.com/Peter-Herrmann/reading-list/files/11748108/meltdown.pdf) - 18
 
 [Spectre Attacks: Exploiting Speculative Execution](https://github.com/Peter-Herrmann/reading-list/files/11748109/spectre.pdf) - 19
+
+## Software
+
+[code.positioning.pdf](https://github.com/Peter-Herrmann/reading-list/files/11749980/code.positioning.pdf)
