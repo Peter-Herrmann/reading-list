@@ -17,6 +17,8 @@ This paper introduces a type of instruction memory cache that caches dynamic tra
 
 [On Pipelining Dynamic Instruction Scheduling Logic](https://github.com/Peter-Herrmann/reading-list/files/11748110/stark.pdf) - 10
 
+This paper introduces the idea of speculative wakeup in a dynamic instruction (out-of-order) scheduler. This solves the problem that selecting and waking up instructions that are dependent on presently executing instructions is an atomic operation, and a costly one at that. Instead of pipelining the logic (forcing a delay between all dependent instrucitons waking up) or not pipelining the logic (lkimiting the maximum frequency), the authors propose pipelining the logic and adding speculative wakeup to guess when an instruction will be ready. If the instruction turned out to not be ready, the instruction can be later discarded. This method allows for a significant IPC gain with no frequency penalty for out-of-order architectures that pipeline the scheduling logic, and offers a way to break up a logic path that can otherwise be the limiting factor for processors that do not pipeline the scheduling logic with a minimal IPC sacrifice. **I chose this paper because it offers the best introduction to the implementation details of an out-of-order superscalar processor**, independently of the speculative wakeup concept.
+
 ## Security
 
 [Meltdown: Reading Kernel Memory from User Space](https://github.com/Peter-Herrmann/reading-list/files/11748108/meltdown.pdf) - 18
