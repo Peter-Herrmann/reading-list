@@ -1,6 +1,3 @@
-# reading-list
-Some short but useful microarchitecture research papers
-
 ## Microarchitecture
 
 [The Microarchitecture of Superscalar Processors](https://github.com/Peter-Herrmann/reading-list/files/11748113/ss_cgi.pdf) - 16
